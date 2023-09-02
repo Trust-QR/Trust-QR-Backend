@@ -1,0 +1,11 @@
+dotenv: .env
+networks:
+  default: development
+  sepolia:
+    verify: True
+  ganache-local:
+    verify: False
+  mainnet-fork:
+    verify: False
+wallets:
+  from_key: ${PRIVATE_KEY}
