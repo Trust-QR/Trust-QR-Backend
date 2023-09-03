@@ -23,7 +23,7 @@ def get_account(index=None, id=None):
     return accounts.add(config["wallets"]["from_key"])
 
 
-def add_product(email,product_id,product_name,product_description,product_category,country_of_origin,date_of_expiry,date_of_manufacturing,price,key,contract):
+def add_product(email,product_id,product_name,product_description,product_category,country_of_origin,date_of_expiry,date_of_manufacturing,price,urls,key,contract):
    
     if contract.checkProductExist(key):
       
@@ -32,7 +32,7 @@ def add_product(email,product_id,product_name,product_description,product_catego
             'msg':'Product ID Already Present'
         }
     
-    txs=contract.addProduct(email,product_id,product_name,product_description,product_category,country_of_origin,date_of_expiry,date_of_manufacturing,price,key,{'from':get_account()})
+    txs=contract.addProduct(email,product_id,product_name,product_description,product_category,country_of_origin,date_of_expiry,date_of_manufacturing,price,urls,key,{'from':get_account()})
 
     txs.wait(1)
 
@@ -64,7 +64,8 @@ def insert_dummy_product_data(contract):
             'country_of_origin': 'India',
             "date_of_expiry": '07/01/2040',
             "date_of_manufacturing": '07/01/2020',
-            "price": 50000
+            "price": 50000,
+             "urls":["https://img.freepik.com/free-photo/purple-osteospermum-daisy-flower_1373-16.jpg?size=626&ext=jpg","https://img.freepik.com/free-photo/yellow-flower-white-background_1203-2149.jpg?size=626&ext=jpg"]
 
             },
             {
@@ -75,7 +76,8 @@ def insert_dummy_product_data(contract):
             'country_of_origin': 'India',
             "date_of_expiry": '07/01/2030',
             "date_of_manufacturing": '07/01/2010',
-            "price": 70000
+            "price": 70000,
+             "urls":["https://img.freepik.com/free-photo/purple-osteospermum-daisy-flower_1373-16.jpg?size=626&ext=jpg","https://img.freepik.com/free-photo/yellow-flower-white-background_1203-2149.jpg?size=626&ext=jpg"]
 
             }],
             '48ddb93f0b30c475423fe177832912c5bcdce3cc72872f8051627967ef278e08':[{
@@ -86,7 +88,8 @@ def insert_dummy_product_data(contract):
             'country_of_origin': 'India',
             "date_of_expiry": '07/01/2040',
             "date_of_manufacturing": '07/01/2020',
-            "price": 100000
+            "price": 100000,
+             "urls":["https://img.freepik.com/free-photo/purple-osteospermum-daisy-flower_1373-16.jpg?size=626&ext=jpg","https://img.freepik.com/free-photo/yellow-flower-white-background_1203-2149.jpg?size=626&ext=jpg"]
 
             },
             {
@@ -97,7 +100,8 @@ def insert_dummy_product_data(contract):
             'country_of_origin': 'India',
             "date_of_expiry": '07/01/2010',
             "date_of_manufacturing": '07/01/2070',
-            "price": 8000
+            "price": 8000,
+             "urls":["https://img.freepik.com/free-photo/purple-osteospermum-daisy-flower_1373-16.jpg?size=626&ext=jpg","https://img.freepik.com/free-photo/yellow-flower-white-background_1203-2149.jpg?size=626&ext=jpg"]
 
             }],
             '87924606b4131a8aceeeae8868531fbb9712aaa07a5d3a756b26ce0f5d6ca674':[{
@@ -108,7 +112,8 @@ def insert_dummy_product_data(contract):
             'country_of_origin': 'India',
             "date_of_expiry": '07/01/2080',
             "date_of_manufacturing": '08/01/2020',
-            "price": 10000
+            "price": 10000,
+             "urls":["https://img.freepik.com/free-photo/purple-osteospermum-daisy-flower_1373-16.jpg?size=626&ext=jpg","https://img.freepik.com/free-photo/yellow-flower-white-background_1203-2149.jpg?size=626&ext=jpg"]
 
             },
             {
@@ -119,7 +124,8 @@ def insert_dummy_product_data(contract):
             'country_of_origin': 'USA',
             "date_of_expiry": '07/01/2010',
             "date_of_manufacturing": '07/01/2070',
-            "price": 1000000
+            "price": 1000000,
+             "urls":["https://img.freepik.com/free-photo/purple-osteospermum-daisy-flower_1373-16.jpg?size=626&ext=jpg","https://img.freepik.com/free-photo/yellow-flower-white-background_1203-2149.jpg?size=626&ext=jpg"]
 
             }]
 
@@ -128,4 +134,4 @@ def insert_dummy_product_data(contract):
     for k in dummyData:
         for e in dummyData[k]:
             res = add_product(k, e['product_id'], e['product_name'], e['product_description'], e['product_category'],
-                            e['country_of_origin'], e['date_of_expiry'], e['date_of_manufacturing'], e['price'], k+e['product_id'], contract)
+                            e['country_of_origin'], e['date_of_expiry'], e['date_of_manufacturing'], e['price'], e['urls'],k+e['product_id'], contract)

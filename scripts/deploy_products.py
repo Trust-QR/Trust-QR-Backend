@@ -14,13 +14,13 @@ def deploy_products():
 def main():
     email='abc@gmail.com'
     prod_id='PROD1'
-
+    urls=["https://img.freepik.com/free-photo/purple-osteospermum-daisy-flower_1373-16.jpg?size=626&ext=jpg","https://img.freepik.com/free-photo/yellow-flower-white-background_1203-2149.jpg?size=626&ext=jpg"]
     product_name,product_description,product_category,country_of_origin,date_of_expiry,date_of_manufacturing,price = 'F14','5G Smarth Phone','Electronic','India','07/01/2040','07/01/2020',50000
 
     contract=deploy_products()
     print('Contract Deployed')
 
-    res=add_product(email,prod_id,product_name,product_description,product_category,country_of_origin,date_of_expiry,date_of_manufacturing,price,email+prod_id,contract)
+    res=add_product(email,prod_id,product_name,product_description,product_category,country_of_origin,date_of_expiry,date_of_manufacturing,price,urls,email+prod_id,contract)
     print(f'Product Added Res {res}')
     res=list_all_products(email,contract)
     print(f'Product Listed {res}')

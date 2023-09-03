@@ -25,12 +25,13 @@ async def addProduct(request: Request):
     date_of_expiry = json_data["date_of_expiry"]
     date_of_manufacturing = json_data["date_of_manufacturing"]
     price = json_data["price"]
+    urls = json_data["urls"]
 
     key=identifier+product_id
 
     try:
 
-        return JSONResponse(add_product(identifier,product_id,product_name,product_description,product_category,country_of_origin,date_of_expiry,date_of_manufacturing,price,key,product_contract))
+        return JSONResponse(add_product(identifier,product_id,product_name,product_description,product_category,country_of_origin,date_of_expiry,date_of_manufacturing,price,urls,key,product_contract))
 
     except Exception as e:
         return {

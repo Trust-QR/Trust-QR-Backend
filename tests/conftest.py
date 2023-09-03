@@ -18,7 +18,8 @@ def dummyData():
             'country_of_origin': 'India',
             "date_of_expiry": '07/01/2040',
             "date_of_manufacturing": '07/01/2020',
-            "price": 240000
+            "price": 240000,
+             "urls":["https://img.freepik.com/free-photo/purple-osteospermum-daisy-flower_1373-16.jpg?size=626&ext=jpg","https://img.freepik.com/free-photo/yellow-flower-white-background_1203-2149.jpg?size=626&ext=jpg"]
 
             },
             {
@@ -29,7 +30,8 @@ def dummyData():
             'country_of_origin': 'India',
             "date_of_expiry": '07/01/2030',
             "date_of_manufacturing": '07/01/2010',
-            "price": 560000
+            "price": 560000,
+             "urls":["https://img.freepik.com/free-photo/purple-osteospermum-daisy-flower_1373-16.jpg?size=626&ext=jpg","https://img.freepik.com/free-photo/yellow-flower-white-background_1203-2149.jpg?size=626&ext=jpg"]
 
             }],
             '48ddb93f0b30c475423fe177832912c5bcdce3cc72872f8051627967ef278e08':[{
@@ -40,7 +42,8 @@ def dummyData():
             'country_of_origin': 'India',
             "date_of_expiry": '07/01/2040',
             "date_of_manufacturing": '07/01/2020',
-            "price": 900000
+            "price": 900000,
+             "urls":["https://img.freepik.com/free-photo/purple-osteospermum-daisy-flower_1373-16.jpg?size=626&ext=jpg","https://img.freepik.com/free-photo/yellow-flower-white-background_1203-2149.jpg?size=626&ext=jpg"]
 
             },
             {
@@ -51,7 +54,8 @@ def dummyData():
             'country_of_origin': 'India',
             "date_of_expiry": '07/01/2010',
             "date_of_manufacturing": '07/01/2070',
-            "price": 8900
+            "price": 8900,
+             "urls":["https://img.freepik.com/free-photo/purple-osteospermum-daisy-flower_1373-16.jpg?size=626&ext=jpg","https://img.freepik.com/free-photo/yellow-flower-white-background_1203-2149.jpg?size=626&ext=jpg"]
 
             }]
     }

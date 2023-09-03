@@ -10,6 +10,7 @@ contract Products {
         string date_of_expiry;
         string date_of_manufacturing;
         uint256 price;
+        string [] image_url;
     }
 
     address public owner;
@@ -47,6 +48,7 @@ contract Products {
         string memory date_of_expiry,
         string memory date_of_manufacturing,
         uint256 price,
+        string [] memory image_url,
         string memory key
 
     ) public onlyOnwner 
@@ -59,7 +61,8 @@ contract Products {
                 country_of_origin,
                 date_of_expiry,
                 date_of_manufacturing,
-                price
+                price,
+                image_url
             );
 
             _exists[key] = true;
