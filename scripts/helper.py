@@ -10,9 +10,7 @@ LOCAL_BLOCKCHAIN_ENVIRONMENTS = ["development", "ganache-local"]
 
 
 def get_account(index=None, id=None):
-    # accounts[0]
-    # accounts.add("env")
-    # accounts.load("id")
+    
     if index!=None:
         return accounts[index]
     if id!=None:
