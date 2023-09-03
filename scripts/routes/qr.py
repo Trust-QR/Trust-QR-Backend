@@ -3,6 +3,8 @@ from starlette.responses import FileResponse
 from tempfile import NamedTemporaryFile
 import qrcode
 import json
+from fastapi.responses import JSONResponse,RedirectResponse
+
 
 qr = APIRouter(prefix="/qr",)
 
@@ -28,12 +30,25 @@ def generate_qr(data):
 
 @qr.post("/generate")
 async def generate_qr_endpoint(request: Request):
+    
+    try:
 
-    json_data = await request.json()
+        identifier=request.headers.get('Identifier')
 
-    qr_code_image_path = generate_qr(json_data)
+        # Add this Check !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        # if is_user(identifier)==False:
+        #     RedirectResponse('localhost:3000/login')
 
-    return FileResponse(qr_code_image_path, headers={
-        "Content-Disposition": "attachment; filename=qrcode.png"
-    })
+        json_data = await request.json()
 
+        qr_code_image_path = generate_qr(json_data)
+
+        return FileResponse(qr_code_image_path, headers={
+            "Content-Disposition": "attachment; filename=qrcode.png"
+        })
+    
+    except Exception as e:
+        return {
+            "success":"false",
+            'error':str(e)
+        }
