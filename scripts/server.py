@@ -20,7 +20,7 @@ app.include_router(qr)
 app.include_router(product)
 
 
-@app.get("/hello")
+@app.get("/api/hello")
 async def root():
     return {"message": "Hello World"}
 

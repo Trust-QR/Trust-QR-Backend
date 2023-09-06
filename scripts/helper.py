@@ -43,20 +43,25 @@ def add_product(email,product_id,product_name,product_description,product_catego
 
 def list_all_products(email,contract):
     
-    res=contract.listProducts(email)
-
+    res=list(contract.listProducts(email))
+    for i in range(len(res)):
+        res[i]=list(res[i])
+        res[i][7]=res[i][7]/100
+        res[i][2]=res[i][2][:30]
     return res
 
 
 def get_detail_product(email,product_id,contract):
 
-    res=contract.productDetail(email,product_id)
+    res=list(contract.productDetail(email,product_id))
+    res[7]=res[7]/100
+
 
     return res
 
 def insert_dummy_product_data(contract):
     dummyData={
-           '9a89ec8fc502dd86d83ca4478779691ed0345747f166c44c7387c27c04c009db': [{
+           '47df8708e49e03bcdd763f331ebf5b4abff947ec5c6866d67647623cc8fafdad': [{
             'product_id': 'PROD1',
             'product_name': 'F14',
             'product_description': '5G Smarth Phone',
@@ -80,7 +85,7 @@ def insert_dummy_product_data(contract):
              "urls":["https://img.freepik.com/free-photo/purple-osteospermum-daisy-flower_1373-16.jpg?size=626&ext=jpg","https://img.freepik.com/free-photo/yellow-flower-white-background_1203-2149.jpg?size=626&ext=jpg"]
 
             }],
-            '48ddb93f0b30c475423fe177832912c5bcdce3cc72872f8051627967ef278e08':[{
+            'b030f2e6e6901605fa5d467262213ecc4c403c83f1d67d0e977fd6d4e13cc869':[{
             'product_id': 'TEST1',
             'product_name': 'LG Fridge',
             'product_description': 'Best Fridge in world',
@@ -104,7 +109,7 @@ def insert_dummy_product_data(contract):
              "urls":["https://img.freepik.com/free-photo/purple-osteospermum-daisy-flower_1373-16.jpg?size=626&ext=jpg","https://img.freepik.com/free-photo/yellow-flower-white-background_1203-2149.jpg?size=626&ext=jpg"]
 
             }],
-            '87924606b4131a8aceeeae8868531fbb9712aaa07a5d3a756b26ce0f5d6ca674':[{
+            '0537897365b7d9cf09b055f52b13065e4d58e228d4922bab03d49e1ee594ea3e':[{
             'product_id': 'TEST3',
             'product_name': 'SHirt',
             'product_description': 'Best Shirt in world',

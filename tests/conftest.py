@@ -10,7 +10,7 @@ def get_product_contract():
 def dummyData():
 
     return {
-           '9a89ec8fc502dd86d83ca4478779691ed0345747f166c44c7387c27c04c009db': [{
+           '47df8708e49e03bcdd763f331ebf5b4abff947ec5c6866d67647623cc8fafdad': [{
             'product_id': 'PROD8',
             'product_name': 'Door',
             'product_description': 'Good Door',
@@ -18,7 +18,7 @@ def dummyData():
             'country_of_origin': 'India',
             "date_of_expiry": '07/01/2040',
             "date_of_manufacturing": '07/01/2020',
-            "price": 240000,
+            "price": 240000.0,
              "urls":["https://img.freepik.com/free-photo/purple-osteospermum-daisy-flower_1373-16.jpg?size=626&ext=jpg","https://img.freepik.com/free-photo/yellow-flower-white-background_1203-2149.jpg?size=626&ext=jpg"]
 
             },
@@ -30,11 +30,11 @@ def dummyData():
             'country_of_origin': 'India',
             "date_of_expiry": '07/01/2030',
             "date_of_manufacturing": '07/01/2010',
-            "price": 560000,
+            "price": 560000.0,
              "urls":["https://img.freepik.com/free-photo/purple-osteospermum-daisy-flower_1373-16.jpg?size=626&ext=jpg","https://img.freepik.com/free-photo/yellow-flower-white-background_1203-2149.jpg?size=626&ext=jpg"]
 
             }],
-            '48ddb93f0b30c475423fe177832912c5bcdce3cc72872f8051627967ef278e08':[{
+            'b030f2e6e6901605fa5d467262213ecc4c403c83f1d67d0e977fd6d4e13cc869':[{
             'product_id': 'TEST10',
             'product_name': 'Bag',
             'product_description': 'Best Bag in world',
@@ -42,7 +42,7 @@ def dummyData():
             'country_of_origin': 'India',
             "date_of_expiry": '07/01/2040',
             "date_of_manufacturing": '07/01/2020',
-            "price": 900000,
+            "price": 900000.0,
              "urls":["https://img.freepik.com/free-photo/purple-osteospermum-daisy-flower_1373-16.jpg?size=626&ext=jpg","https://img.freepik.com/free-photo/yellow-flower-white-background_1203-2149.jpg?size=626&ext=jpg"]
 
             },
@@ -54,7 +54,7 @@ def dummyData():
             'country_of_origin': 'India',
             "date_of_expiry": '07/01/2010',
             "date_of_manufacturing": '07/01/2070',
-            "price": 8900,
+            "price": 8900.0,
              "urls":["https://img.freepik.com/free-photo/purple-osteospermum-daisy-flower_1373-16.jpg?size=626&ext=jpg","https://img.freepik.com/free-photo/yellow-flower-white-background_1203-2149.jpg?size=626&ext=jpg"]
 
             }]

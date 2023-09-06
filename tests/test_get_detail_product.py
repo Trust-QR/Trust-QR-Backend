@@ -10,7 +10,7 @@ def test_get_detail_product(get_product_contract,dummyData):
            
             res = get_detail_product(k, e['product_id'], get_product_contract)
 
-            temp=[ e['product_name'], e['product_description'], e['product_category'],
+            temp=[e['product_id'], e['product_name'], e['product_description'], e['product_category'],
                             e['country_of_origin'], e['date_of_expiry'], e['date_of_manufacturing'], e['price'],e['urls'] ]
             
                 
