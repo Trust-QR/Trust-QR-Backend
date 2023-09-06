@@ -47,7 +47,7 @@ def list_all_products(email,contract):
     for i in range(len(res)):
         res[i]=list(res[i])
         res[i][7]=res[i][7]/100
-        res[i][2]=res[i][2][:30]
+        res[i][2]=res[i][2][:10]
     return res
 
 
