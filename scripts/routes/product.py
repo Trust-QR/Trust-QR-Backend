@@ -13,8 +13,11 @@ async def addProduct(request: Request):
     identifier=request.headers.get('Identifier')
 
     # Add this Check !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    # if is_user(identifier)==False:
-    #     RedirectResponse('localhost:3000/login')
+    if isUser(identifier)==False:
+        return  {
+            "success": "false",
+            "error": "You aren't Authorised"
+        }
 
     sha256 = hashlib.sha256()
     sha256.update(identifier.encode('utf-8'))
@@ -87,8 +90,11 @@ async def getAllProduct(request: Request):
         identifier=request.headers.get('Identifier')
 
         # Add this Check !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        # if is_user(identifier)==False:
-        #     RedirectResponse('localhost:3000/login')
+        if isUser(identifier)==False:
+            return  {
+                "success": "false",
+                "error": "You aren't Authorised"
+            }
 
 
         sha256 = hashlib.sha256()
@@ -113,8 +119,11 @@ async def getDetailProduct(request: Request):
         identifier=request.headers.get('Identifier')
 
         # Add this Check !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        # if is_user(identifier)==False:
-        #     RedirectResponse('localhost:3000/login')
+        if isUser(identifier)==False:
+            return  {
+                "success": "false",
+                "error": "You aren't Authorised"
+            }
 
         sha256 = hashlib.sha256()
         sha256.update(identifier.encode('utf-8'))

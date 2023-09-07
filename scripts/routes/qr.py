@@ -40,8 +40,11 @@ async def generate_qr_endpoint(request: Request):
         double_encoded_identifier=sha256.hexdigest()
 
         # Add this Check !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        # if is_user(identifier)==False:
-        #     RedirectResponse('localhost:3000/login')
+        if isUser(identifier)==False:
+            return  {
+                "success": "false",
+                "error": "You aren't Authorised"
+            }
 
         json_data = await request.json()
         # json_data['price']='Rs. '+str(json_data['price'])
