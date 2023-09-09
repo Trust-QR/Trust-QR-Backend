@@ -2,8 +2,6 @@
 pragma solidity ^0.8.21;
 
 contract Authentication {
-    // bytes32 private userName;
-    // bytes32 private password;
     mapping(string => string) private credential;
     mapping(string => bool) private isExists;
     address public owner;

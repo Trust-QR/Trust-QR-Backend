@@ -5,11 +5,9 @@ from scripts.deploy_products import deploy_products
 @pytest.fixture(scope='session', autouse=True)
 def testing_users():
     return {
-        'abhishekkumar232105@gmail.com': 'Abc123@',
-        'huntingcoder7.me@gmail.com': 'Cbd123@',
-        'abc@gmail.com': 'aBc123@',
-        'example@gmail.com': 'Example123@',
-        'xyz@gmail.com': 'xYz123@',
+        '9a89ec8fc502dd86d83ca4478779691ed0345747f166c44c7387c27c04c009db': '58d4b203ba5cdc03ec1f1d3e6837c5327d4be2a1d54ccac506f3ad22d3b8ead2',
+        '87924606b4131a8aceeeae8868531fbb9712aaa07a5d3a756b26ce0f5d6ca674': '6763650f183eedbcca2f87f45b8175597ea70cba5d9d651db428447bd126a579',
+        '48ddb93f0b30c475423fe177832912c5bcdce3cc72872f8051627967ef278e08': 'b186a1e47e904f69f4d4fcdbc9f22a1056493ccc9c81510b9d502b3b317c283d',
     }
 
 
