@@ -18,7 +18,7 @@ def generate_qr(double_encoded_identifier,data):
         box_size=10,
         border=4,
     )
-    url=f'http://172.25.163.97:8000/product/qr/{double_encoded_identifier}/{product_id}'
+    url=f'http://192.168.105.134:8070/product/qr/{double_encoded_identifier}/{product_id}'
     qr.add_data(url)
     qr.make(fit=True)
 
