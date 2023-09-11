@@ -3,6 +3,7 @@ pragma solidity ^0.8.21;
 
 contract Products {
     struct Product {
+        string product_id;
         string product_name;
         string product_description;
         string product_category;
@@ -10,6 +11,7 @@ contract Products {
         string date_of_expiry;
         string date_of_manufacturing;
         uint256 price;
+        string [] image_url;
     }
 
     address public owner;
@@ -47,19 +49,22 @@ contract Products {
         string memory date_of_expiry,
         string memory date_of_manufacturing,
         uint256 price,
+        string [] memory image_url,
         string memory key
 
     ) public onlyOnwner 
     {
         
             email_to_product_map[email][product_id] = Product(
+                product_id,
                 product_name,
                 product_description,
                 product_category,
                 country_of_origin,
                 date_of_expiry,
                 date_of_manufacturing,
-                price
+                price,
+                image_url
             );
 
             _exists[key] = true;
@@ -75,8 +80,6 @@ contract Products {
         uint256 productCount = email_to_list_of_product_id[email].length;
         
         Product[] memory products = new Product[](productCount);
-
-    
 
         for (uint256 i = 0; i < productCount; i++) {
             products[i] = email_to_product_map[email][email_to_list_of_product_id[email][i]];

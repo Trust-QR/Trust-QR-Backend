@@ -12,7 +12,7 @@ def testing_users():
 
 
 @pytest.fixture(scope="session", autouse=True)
-def getContract():
+def get_product_contract():
     return deploy_products()
 
 
@@ -20,49 +20,52 @@ def getContract():
 def dummyData():
 
     return {
-        'a7coder@gmail.com': [{
-            'product_id': 'PROD1',
-            'product_name': 'F14',
-            'product_description': '5G Smarth Phone',
-            'product_category': 'Electronic',
+           '47df8708e49e03bcdd763f331ebf5b4abff947ec5c6866d67647623cc8fafdad': [{
+            'product_id': 'PROD8',
+            'product_name': 'Door',
+            'product_description': 'Good Door',
+            'product_category': 'Furniture',
             'country_of_origin': 'India',
             "date_of_expiry": '07/01/2040',
             "date_of_manufacturing": '07/01/2020',
-            "price": 50000
+            "price": 240000.0,
+             "urls":["https://img.freepik.com/free-photo/purple-osteospermum-daisy-flower_1373-16.jpg?size=626&ext=jpg","https://img.freepik.com/free-photo/yellow-flower-white-background_1203-2149.jpg?size=626&ext=jpg"]
 
         },
             {
-            'product_id': 'PROD2',
-            'product_name': 'APple',
-            'product_description': 'eatable',
-            'product_category': 'Food',
+            'product_id': 'PROD9',
+            'product_name': 'Game',
+            'product_description': 'Best Game in the world',
+            'product_category': 'IT',
             'country_of_origin': 'India',
             "date_of_expiry": '07/01/2030',
             "date_of_manufacturing": '07/01/2010',
-            "price": 70000
+            "price": 560000.0,
+             "urls":["https://img.freepik.com/free-photo/purple-osteospermum-daisy-flower_1373-16.jpg?size=626&ext=jpg","https://img.freepik.com/free-photo/yellow-flower-white-background_1203-2149.jpg?size=626&ext=jpg"]
 
-        }],
-        'abc@gmail.com': [{
-            'product_id': 'TEST1',
-            'product_name': 'LG Fridge',
-            'product_description': 'Best Fridge in world',
-            'product_category': 'Electronic',
+            }],
+            'b030f2e6e6901605fa5d467262213ecc4c403c83f1d67d0e977fd6d4e13cc869':[{
+            'product_id': 'TEST10',
+            'product_name': 'Bag',
+            'product_description': 'Best Bag in world',
+            'product_category': 'Items',
             'country_of_origin': 'India',
             "date_of_expiry": '07/01/2040',
             "date_of_manufacturing": '07/01/2020',
-            "price": 100000
+            "price": 900000.0,
+             "urls":["https://img.freepik.com/free-photo/purple-osteospermum-daisy-flower_1373-16.jpg?size=626&ext=jpg","https://img.freepik.com/free-photo/yellow-flower-white-background_1203-2149.jpg?size=626&ext=jpg"]
 
         },
             {
-                'product_id': 'Test2',
-                'product_name': 'FAN',
-                'product_description': 'Fastest Fan in World',
-                'product_category': 'Electronic',
-                'country_of_origin': 'India',
-                "date_of_expiry": '07/01/2010',
-                "date_of_manufacturing": '07/01/2070',
-                "price": 8000
+            'product_id': 'Test11',
+            'product_name': 'Bed',
+            'product_description': 'Best Best in the Country',
+            'product_category': 'Furniture',
+            'country_of_origin': 'India',
+            "date_of_expiry": '07/01/2010',
+            "date_of_manufacturing": '07/01/2070',
+            "price": 8900.0,
+             "urls":["https://img.freepik.com/free-photo/purple-osteospermum-daisy-flower_1373-16.jpg?size=626&ext=jpg","https://img.freepik.com/free-photo/yellow-flower-white-background_1203-2149.jpg?size=626&ext=jpg"]
 
-        }]
-
+            }]
     }

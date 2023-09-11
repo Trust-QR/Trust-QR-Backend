@@ -1,17 +1,9 @@
-from scripts.helper import inser_dummy_users, get_account, isUser
+from scripts.helper import inser_dummy_users, get_account, isUser,deploy_user
 from brownie import (
     network,
     config,
     Authentication,
 )
-
-
-def deploy_user():
-    account = get_account()
-    contract = Authentication.deploy(
-        {'from': account}, publish_source=config['networks'][network.show_active()].get('verify'))
-    inser_dummy_users(account, contract)
-    return contract
 
 
 def add_newUser(user, passw, contract):
